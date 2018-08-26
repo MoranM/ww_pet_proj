@@ -21,6 +21,11 @@
 </p>
 
 <p>
+  <strong>Average rating</strong>
+  <%= @restaurant.avg_rating %>
+</p>
+
+<p>
   <strong>Reviews:</strong>
   <%= @restaurant.reviews.map(&:comment).join(', ') %>
 </p>
