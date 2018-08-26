@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>Cuisine:</strong>
+  <%= @restaurant.cuisine %>
+</p>
+
+<p>
+  <strong>Accept 10bis:</strong>
+  <%= @restaurant.accept_10bis %>
+</p>
+
+<p>
+  <strong>Max delivery time:</strong>
+  <%= @restaurant.max_delivery_time %>
+</p>
+
+<p>
+  <strong>Reviews:</strong>
+  <%= @restaurant.reviews.map(&:comment).join(', ') %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>
