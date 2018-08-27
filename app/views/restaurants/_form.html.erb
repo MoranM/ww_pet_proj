@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :cuisine %>
-    <%= form.text_field :cuisine %>
+    <%= collection_select(:restaurant, :cuisine_id, Cuisine.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
