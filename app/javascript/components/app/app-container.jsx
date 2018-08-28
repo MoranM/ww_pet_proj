@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../packs/main_style.scss';
+import style from './app-container.scss';
 import constants from '../constants';
 import Header from '../appHeader/header';
 

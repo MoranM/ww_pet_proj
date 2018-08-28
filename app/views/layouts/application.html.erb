@@ -5,13 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'main_style' %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <% if content_for? :for_head %>
+      <%= yield :for_head %>
+    <% end %>
   </head>
 
   <body>
     <%= yield %>
-    <%= javascript_pack_tag 'react_app' %>
   </body>
 </html>

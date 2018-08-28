@@ -1,10 +1,11 @@
 import React from 'react';
-import style from '../../packs/main_style.scss';
 import SearchBar from '../searchBar/search-bar';
+import style from './header.scss';
 
 const Header = (props) => {
     return (
-        <div >
+        <div className={style.header_wrapper}>
+            <div className={style.title}>WeEat</div>
             <SearchBar />
         </div>
     )
