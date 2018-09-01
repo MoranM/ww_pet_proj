@@ -2,6 +2,7 @@ import React from "react";
 import _ from 'lodash';
 import style from './rest-list.scss';
 
+
 const RestListItem = (props) => {
     const rest = props.value;
     const rating = parseInt(rest.avg_rating);
@@ -14,12 +15,17 @@ const RestListItem = (props) => {
     })
 
     return (
-        <li className={style["rest-li"]}>
-            <div className={style["cuisine-name-wrapper"]}>
+        <li className={style.restLi}>
+            <div className={style.cuisineWrapper}>
                 <div className={style.cuisine} title={rest.cuisine_name}>{rest.cuisine_code}</div>
-                <div>{rest.name}</div>
+                <div className={style.description}>
+                    <div className="fontSize22">{rest.name}</div>
+                    <div>
+                        <span className="fontSize18 mR5">{rest.cuisine_name}</span>
+                        <span className="colorYellow">{stars}</span>
+                    </div>
+                </div>
             </div>
-            <div>{stars}</div>
         </li>
     )
 }

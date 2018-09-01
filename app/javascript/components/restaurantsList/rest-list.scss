@@ -1,10 +1,17 @@
-.rest-li{
+.restLi{
   border: 1px solid #e7e7e7;
+  padding: 5px 15px;
 }
-.cuisine-name-wrapper{
+.cuisineWrapper{
   display: flex;
 
 }
 .cuisine{
   font-family: 'ef_cuisinesregular';
+  font-size: 50px;
+  margin-right: 15px;
+
+}
+.description{
+
 }

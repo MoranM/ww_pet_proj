@@ -4,6 +4,7 @@ import Header from '../appHeader/header';
 import {connect} from 'react-redux';
 import {fetchResturantsAsync} from "../../actions";
 import RestaurantsList from '../restaurantsList/rest-list';
+import {Grid, Row, Col} from 'react-bootstrap'
 
 class AppContainer extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class AppContainer extends React.Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.fetchRestaurants();
     }
 
@@ -21,17 +22,19 @@ class AppContainer extends React.Component {
     render() {
         console.log('props', this.props);
         return (
-            <div className={style.mainContainer}>
-                <Header />
-                <div className={style.contentWrapper}>
-                    <div className={style.leftPane}>
-                        <RestaurantsList restaurants={this.props.restaurants} />
-                    </div>
-                    <div className={style.rightPane}>
+            <Grid fluid={true} className={style.mainContainer}>
+                <Row>
+                    <Col xs={12}><Header/></Col>
+                </Row>
+                <Row>
+                    <Col xs={3}>
+                        <RestaurantsList restaurants={this.props.restaurants}/>
+                    </Col>
+                    <Col xs={9}>
 
-                    </div>
-                </div>
-            </div>
+                    </Col>
+                </Row>
+            </Grid>
         )
     }
 }
@@ -43,7 +46,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 function mapStateToProps(state) {
-    return{
+    return {
         loading: state.loading,
         err: state.err,
         restaurants: state.restaurants
@@ -51,4 +54,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps) (AppContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
