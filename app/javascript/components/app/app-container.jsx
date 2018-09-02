@@ -6,6 +6,7 @@ import {fetchRestaurantsAsync} from "../../actions";
 import RestaurantsList from '../restaurantsList/rest-list';
 import {Grid, Row, Col} from 'react-bootstrap'
 import FilterBoxContainer from "../filterBox/filte-box-conainer";
+import Map from "../map/map";
 
 class AppContainer extends React.Component {
     constructor(props) {
@@ -35,7 +36,7 @@ class AppContainer extends React.Component {
                         <RestaurantsList restaurants={this.props.restaurants}/>
                     </Col>
                     <Col xs={9}>
-
+                        <Map restaurants={this.props.restaurants} />
                     </Col>
                 </Row>
             </Grid>
