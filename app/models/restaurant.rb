@@ -1,6 +1,11 @@
+
+
 class Restaurant < ApplicationRecord
   has_many :reviews
   belongs_to :cuisine
+
+  geocoded_by :address
+  after_validation :geocode
 
   validates :cuisine_id, presence: true
 

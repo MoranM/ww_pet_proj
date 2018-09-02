@@ -35,7 +35,7 @@ export const filterRestaurants = (filters) =>{
     return action;
 }
 
-export const fetchResturantsAsync = () => {
+export const fetchRestaurantsAsync = () => {
     const url = BASE_URL + 'restaurants.json';
     return (dispatch) => {
         dispatch(fetchRestaurants());

@@ -2,9 +2,10 @@ import React from 'react';
 import style from './app-container.scss';
 import Header from '../appHeader/header';
 import {connect} from 'react-redux';
-import {fetchResturantsAsync} from "../../actions";
+import {fetchRestaurantsAsync} from "../../actions";
 import RestaurantsList from '../restaurantsList/rest-list';
 import {Grid, Row, Col} from 'react-bootstrap'
+import FilterBoxContainer from "../filterBox/filte-box-conainer";
 
 class AppContainer extends React.Component {
     constructor(props) {
@@ -27,6 +28,11 @@ class AppContainer extends React.Component {
                     <Col xs={12}><Header/></Col>
                 </Row>
                 <Row>
+                    <Col xs={12}>
+                        <FilterBoxContainer />
+                    </Col>
+                </Row>
+                <Row>
                     <Col xs={3}>
                         <RestaurantsList restaurants={this.props.restaurants}/>
                     </Col>
@@ -41,7 +47,7 @@ class AppContainer extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchRestaurants: () => dispatch(fetchResturantsAsync())
+        fetchRestaurants: () => dispatch(fetchRestaurantsAsync())
     };
 };
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cuisines
   root 'pages#index', as: 'pages_index'
 
   resources :reviews

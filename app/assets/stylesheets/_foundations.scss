@@ -1,6 +1,6 @@
-@import "colors";
+@import "../../javascript/style/colors";
 
-:global(.mB0){
+.mB0{
   margin-bottom: 0px !important;
 }
 .mB2{
@@ -264,19 +264,19 @@
   user-select: none;
 }
 
-:global(.fontSize18){
+.fontSize18{
   font-size: 18px !important;
 }
 .fontSize16{
   font-size: 16px !important;
 }
-:global(.fontSize14){
+.fontSize14{
   font-size: 14px !important;
 }
 .fontSize12{
   font-size: 12px !important;
 }
-:global(.fontSize22){
+.fontSize22{
   font-size: 22px !important;
 }
 .fontSize24{
@@ -354,7 +354,7 @@
   background-color:  $secondary_dark !important;
 }
 
-:global(.colorYellow){
+.colorYellow{
   color: $stars !important;
 }
 
