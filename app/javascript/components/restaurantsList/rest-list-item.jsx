@@ -19,9 +19,9 @@ const RestListItem = (props) => {
             <div className={style.cuisineWrapper}>
                 <div className={style.cuisine} title={rest.cuisine_name}>{rest.cuisine_code}</div>
                 <div className={style.description}>
-                    <div className="fontSize22">{rest.name}</div>
+                    <div className="fontSize18">{rest.name}</div>
                     <div>
-                        <span className="fontSize18 mR5">{rest.cuisine_name}</span>
+                        <span className="fontSize14 mR5">{rest.cuisine_name}</span>
                         <span className="colorYellow">{stars}</span>
                     </div>
                 </div>

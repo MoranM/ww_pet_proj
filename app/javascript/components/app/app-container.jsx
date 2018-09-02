@@ -25,13 +25,11 @@ class AppContainer extends React.Component {
         return (
             <Grid fluid={true} className={style.mainContainer}>
                 <Row>
-                    <Col xs={12}><Header/></Col>
-                </Row>
-                <Row>
                     <Col xs={12}>
-                        <FilterBoxContainer />
+                        <Header/>
                     </Col>
                 </Row>
+                <FilterBoxContainer />
                 <Row>
                     <Col xs={3}>
                         <RestaurantsList restaurants={this.props.restaurants}/>

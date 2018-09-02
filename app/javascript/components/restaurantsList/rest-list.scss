@@ -1,14 +1,21 @@
 .restLi{
-  border: 1px solid #e7e7e7;
+  background-color: #e7e7e7;
+  border-bottom: none;
   padding: 5px 15px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+
 }
 .cuisineWrapper{
   display: flex;
-
+  align-items: center;
 }
 .cuisine{
   font-family: 'ef_cuisinesregular';
-  font-size: 50px;
+  font-size: 45px;
   margin-right: 15px;
 
 }
