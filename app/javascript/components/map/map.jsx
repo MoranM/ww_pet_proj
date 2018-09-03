@@ -19,6 +19,7 @@ class Map extends Component {
                             key={r.id}
                             position={{lat: r.latitude, lng: r.longitude}}
                             onClick={() => {openedMarkers[r.id] = true;}}
+                            title={r.name}
                         >
                             {
                                 openedMarkers[r.id] &&
