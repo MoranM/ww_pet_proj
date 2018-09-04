@@ -65,3 +65,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'geocoder'
 
+gem "rspec"
+
+gem 'rspec-rails'
+
+gem 'shoulda'
+
+gem 'rails-controller-testing'
+
+gem "factory_bot_rails"
+
+gem 'database_cleaner'
