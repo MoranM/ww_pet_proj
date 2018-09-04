@@ -17,7 +17,7 @@ end
 FactoryBot.define do
   factory :review do
     reviewer_name "Moshe"
-    rating rand(1..3)
+    rating Random.new.rand(1..3)
     comment "very nice"
     association :restaurant
   end

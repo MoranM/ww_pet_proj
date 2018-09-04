@@ -36,7 +36,7 @@ RSpec.describe RestaurantsController do
 
   describe "POST create" do
     before(:all) do
-      @cuisine = FactoryBot.create(:restaurant)
+      @cuisine = FactoryBot.create(:cuisine)
       @rest_attr = FactoryBot.build(:restaurant).attributes
       @invalid_rest_attr = @rest_attr.clone
       @invalid_rest_attr.delete("name")
@@ -54,7 +54,7 @@ RSpec.describe RestaurantsController do
       expect(response).to redirect_to Restaurant.last
     end
 
-    it "with invalid attributes does not save the new contact" do
+    it "with invalid attributes does not save the new restaurant" do
       expect{
         post :create, params: {restaurant: @invalid_rest_attr}
       }.to_not change(Restaurant,:count)
