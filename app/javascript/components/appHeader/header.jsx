@@ -5,7 +5,7 @@ import style from './header.scss';
 const Header = (props) => {
   return (
     <div className={style.header_wrapper}>
-      <div className={style.title}>WeEat</div>
+      <div className={style.title}>WeAreGettingFat</div>
       <SearchBarContainer />
     </div>
   );
