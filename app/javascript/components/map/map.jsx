@@ -29,7 +29,7 @@ class Map extends Component {
                             }
 
                         </Marker>
-                    )
+                    );
                 })}
             </GoogleMap>
         ));

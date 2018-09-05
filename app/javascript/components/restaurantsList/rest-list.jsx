@@ -1,16 +1,16 @@
 import React from 'react';
-import RestListItem  from './rest-list-item'
+import RestListItem from './rest-list-item';
 
 const RestaurantsList = (props) => {
-    const rests = props.restaurants;
+  const rests = props.restaurants;
 
-    const listItems = rests.map(r => {
-        return <RestListItem value={r} key={r.id.toString()} />
-    });
+  const listItems = rests.map(r => {
+    return <RestListItem value={r} key={r.id.toString()} />;
+  });
 
-    return (
-        <ul>{listItems}</ul>
-    )
+  return (
+    <ul>{listItems}</ul>
+  );
 };
 
 export default RestaurantsList;
