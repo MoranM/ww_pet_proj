@@ -3,18 +3,18 @@
 // of the page.
 
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 import AppContainer from '../components/app/app-container';
-import {Provider} from 'react-redux';
-import {configureStore} from '../store/storeCreator'
+import { Provider } from 'react-redux';
+import { configureStore } from '../store/storeCreator';
 
 const store = configureStore();
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-      <Provider store={store}>
-          <AppContainer />
-      </Provider>,
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>,
     document.body.appendChild(document.createElement('div')),
-  )
-})
+  );
+});
